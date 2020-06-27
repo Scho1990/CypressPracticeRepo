@@ -1,11 +1,13 @@
 {
     "reporter":"mochawesome",
     "reporterOptions":{
-        "reportDir":"cypress/reports",
+        "reportDir":"cypress/report/mochawesome-report",
         "reportFilename":"projectreport",
-        "overwrite":"true",
-        "html":true,
+        "overwrite":"false",
+        "html":false,
         "json":true,
-        "charts":true
-    }
+        "charts":true,
+        "timestamp": "mmddyyyy_HHMMss"
+    },
+    "video":false
 }

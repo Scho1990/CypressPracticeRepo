@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-06-27T18:34:25.374Z",
+    "end": "2020-06-27T18:35:43.749Z",
+    "duration": 78375,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a5f364e4-21fb-4a98-ba5a-60247170b8e7",
+      "title": "",
+      "fullFile": "cypress\\integration\\mytest\\dropdown_test.js",
+      "file": "cypress\\integration\\mytest\\dropdown_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81b936bc-99af-4285-8821-615db1e69369",
+          "title": "dropdown test in orange hrm application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check select dropdown",
+              "fullTitle": "dropdown test in orange hrm application check select dropdown",
+              "timedOut": null,
+              "duration": 21691,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.orangehrm.com/orangehrm-30-day-trial/');\ncy.get('#Form_submitForm_Country').select('India').should('have.value', 'India1');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected '<select#Form_submitForm_Country.dropdown.countries.fleft>' to have value 'India1', but the value was 'India'",
+                "estack": "AssertionError: Timed out retrying: expected '<select#Form_submitForm_Country.dropdown.countries.fleft>' to have value 'India1', but the value was 'India'\n    at Context.eval (https://www.orangehrm.com/__cypress/tests?p=cypress\\integration\\mytest\\dropdown_test.js:7:56)",
+                "diff": "- 'India'\n+ 'India1'\n"
+              },
+              "uuid": "91ee8ad3-ca5e-46b8-84ae-46fbaea802d6",
+              "parentUUID": "81b936bc-99af-4285-8821-615db1e69369",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check google search dropdown",
+              "fullTitle": "dropdown test in orange hrm application check google search dropdown",
+              "timedOut": null,
+              "duration": 9267,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.google.com/');\ncy.get(\"[name='q']\").type('cypress');\ncy.get('ul.erkvQe').find('li span').contains('cypress tutorial').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'cypress tutorial' within the element: [ <span>, 9 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'cypress tutorial' within the element: [ <span>, 9 more... ] but never did.\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress\\integration\\mytest\\dropdown_test.js:12:41)",
+                "diff": null
+              },
+              "uuid": "6bf7cc47-2395-48f2-b046-e9d2936538d5",
+              "parentUUID": "81b936bc-99af-4285-8821-615db1e69369",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check amazon product search dropdown",
+              "fullTitle": "dropdown test in orange hrm application check amazon product search dropdown",
+              "timedOut": null,
+              "duration": 20283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.in/');\ncy.get(\"#twotabsearchtextbox\").type('laptops');\ncy.get('#suggestions').find('div span:nth-child(2)').contains('lenovo').click();",
+              "err": {},
+              "uuid": "fb7d9ba3-22c3-41a2-92a5-5de7565202e1",
+              "parentUUID": "81b936bc-99af-4285-8821-615db1e69369",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb7d9ba3-22c3-41a2-92a5-5de7565202e1"
+          ],
+          "failures": [
+            "91ee8ad3-ca5e-46b8-84ae-46fbaea802d6",
+            "6bf7cc47-2395-48f2-b046-e9d2936538d5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 51241,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "projectreport",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "reportFilename": "projectreport",
+        "overwrite": "false",
+        "html": false,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-27T18:36:25.883Z",
+    "end": "2020-06-27T18:36:58.745Z",
+    "duration": 32862,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33e21534-aab5-43d2-9b47-3210662d7005",
+      "title": "",
+      "fullFile": "cypress\\integration\\mytest\\logincrm.spec.js",
+      "file": "cypress\\integration\\mytest\\logincrm.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a75f6b4-ecc0-4c4b-8d79-97880bdd6cc3",
+          "title": "login into crm application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify user is login successfully",
+              "fullTitle": "login into crm application verify user is login successfully",
+              "timedOut": null,
+              "duration": 22759,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var loginPage = new _LoginPage[\"default\"]();\ncy.visit('https://classic.freecrm.com/index.html');\ncy.title().should('have', 'CRMPRO  - CRM software for customer relationship management, sales, and support.');\nloginPage.doLogin('batchautomation', 'Test@12345'); // cy.get(\"input[name='username']\").type('batchautomation')\n//cy.get(\"input[name='password']\").type('Test@12345')\n//cy.get(\"input[value='Login']\").click()\ncy.title().should('have', 'CRMPRO');\ncy.title().should('include', 'CRMPRO'); //cy.frameLoaded(\"frame[name='mainpanel']\")\ncy.get(\"frame[name='mainpanel']\").its('0.contentDocument').should('not.be.empty').its('body').should('not.be.undefined').then(cy.wrap).find(\"a[title=Deals]\").should('have.text', 'Deals').click();",
+              "err": {},
+              "uuid": "ebce91f0-66fd-4572-b045-2aa429ad1665",
+              "parentUUID": "1a75f6b4-ecc0-4c4b-8d79-97880bdd6cc3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebce91f0-66fd-4572-b045-2aa429ad1665"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22759,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "projectreport",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "reportFilename": "projectreport",
+        "overwrite": "false",
+        "html": false,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

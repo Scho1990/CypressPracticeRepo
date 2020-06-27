@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2020-06-26T19:06:12.905Z",
-    "end": "2020-06-26T19:06:12.925Z",
-    "duration": 20,
+    "start": "2020-06-27T18:37:54.883Z",
+    "end": "2020-06-27T18:37:54.887Z",
+    "duration": 4,
     "testsRegistered": 0,
     "passPercent": null,
     "pendingPercent": null,
@@ -27,7 +27,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "projectreport",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -37,12 +37,13 @@
     },
     "marge": {
       "options": {
-        "reportDir": "cypress/reports",
+        "reportDir": "cypress/report/mochawesome-report",
         "reportFilename": "projectreport",
-        "overwrite": "true",
-        "html": true,
+        "overwrite": "false",
+        "html": false,
         "json": true,
-        "charts": true
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
       },
       "version": "5.1.0"
     }

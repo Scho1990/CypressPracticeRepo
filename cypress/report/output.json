@@ -1,0 +1,329 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-06-27T18:40:01.972Z",
+    "end": "2020-06-27T18:40:01.974Z",
+    "duration": 114673,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666667,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a5f364e4-21fb-4a98-ba5a-60247170b8e7",
+      "title": "",
+      "fullFile": "cypress\\integration\\mytest\\dropdown_test.js",
+      "file": "cypress\\integration\\mytest\\dropdown_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81b936bc-99af-4285-8821-615db1e69369",
+          "title": "dropdown test in orange hrm application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check select dropdown",
+              "fullTitle": "dropdown test in orange hrm application check select dropdown",
+              "timedOut": null,
+              "duration": 21691,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.orangehrm.com/orangehrm-30-day-trial/');\ncy.get('#Form_submitForm_Country').select('India').should('have.value', 'India1');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected '<select#Form_submitForm_Country.dropdown.countries.fleft>' to have value 'India1', but the value was 'India'",
+                "estack": "AssertionError: Timed out retrying: expected '<select#Form_submitForm_Country.dropdown.countries.fleft>' to have value 'India1', but the value was 'India'\n    at Context.eval (https://www.orangehrm.com/__cypress/tests?p=cypress\\integration\\mytest\\dropdown_test.js:7:56)",
+                "diff": "- 'India'\n+ 'India1'\n"
+              },
+              "uuid": "91ee8ad3-ca5e-46b8-84ae-46fbaea802d6",
+              "parentUUID": "81b936bc-99af-4285-8821-615db1e69369",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check google search dropdown",
+              "fullTitle": "dropdown test in orange hrm application check google search dropdown",
+              "timedOut": null,
+              "duration": 9267,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.google.com/');\ncy.get(\"[name='q']\").type('cypress');\ncy.get('ul.erkvQe').find('li span').contains('cypress tutorial').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'cypress tutorial' within the element: [ <span>, 9 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'cypress tutorial' within the element: [ <span>, 9 more... ] but never did.\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress\\integration\\mytest\\dropdown_test.js:12:41)",
+                "diff": null
+              },
+              "uuid": "6bf7cc47-2395-48f2-b046-e9d2936538d5",
+              "parentUUID": "81b936bc-99af-4285-8821-615db1e69369",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check amazon product search dropdown",
+              "fullTitle": "dropdown test in orange hrm application check amazon product search dropdown",
+              "timedOut": null,
+              "duration": 20283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.in/');\ncy.get(\"#twotabsearchtextbox\").type('laptops');\ncy.get('#suggestions').find('div span:nth-child(2)').contains('lenovo').click();",
+              "err": {},
+              "uuid": "fb7d9ba3-22c3-41a2-92a5-5de7565202e1",
+              "parentUUID": "81b936bc-99af-4285-8821-615db1e69369",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb7d9ba3-22c3-41a2-92a5-5de7565202e1"
+          ],
+          "failures": [
+            "91ee8ad3-ca5e-46b8-84ae-46fbaea802d6",
+            "6bf7cc47-2395-48f2-b046-e9d2936538d5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 51241,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "33e21534-aab5-43d2-9b47-3210662d7005",
+      "title": "",
+      "fullFile": "cypress\\integration\\mytest\\logincrm.spec.js",
+      "file": "cypress\\integration\\mytest\\logincrm.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a75f6b4-ecc0-4c4b-8d79-97880bdd6cc3",
+          "title": "login into crm application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify user is login successfully",
+              "fullTitle": "login into crm application verify user is login successfully",
+              "timedOut": null,
+              "duration": 22759,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var loginPage = new _LoginPage[\"default\"]();\ncy.visit('https://classic.freecrm.com/index.html');\ncy.title().should('have', 'CRMPRO  - CRM software for customer relationship management, sales, and support.');\nloginPage.doLogin('batchautomation', 'Test@12345'); // cy.get(\"input[name='username']\").type('batchautomation')\n//cy.get(\"input[name='password']\").type('Test@12345')\n//cy.get(\"input[value='Login']\").click()\ncy.title().should('have', 'CRMPRO');\ncy.title().should('include', 'CRMPRO'); //cy.frameLoaded(\"frame[name='mainpanel']\")\ncy.get(\"frame[name='mainpanel']\").its('0.contentDocument').should('not.be.empty').its('body').should('not.be.undefined').then(cy.wrap).find(\"a[title=Deals]\").should('have.text', 'Deals').click();",
+              "err": {},
+              "uuid": "ebce91f0-66fd-4572-b045-2aa429ad1665",
+              "parentUUID": "1a75f6b4-ecc0-4c4b-8d79-97880bdd6cc3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebce91f0-66fd-4572-b045-2aa429ad1665"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22759,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7f8cb6e8-2508-4cdd-a314-988704a7c9ed",
+      "title": "",
+      "fullFile": "cypress\\integration\\mytest\\sample.spec.js",
+      "file": "cypress\\integration\\mytest\\sample.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0ed420a9-5b80-4c55-88ac-6f03691c3fea",
+          "title": "does not match",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be true",
+              "fullTitle": "does not match should be true",
+              "timedOut": null,
+              "duration": 60,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(true).to.equal(true);",
+              "err": {},
+              "uuid": "07382067-4760-4176-82c0-67573fabd31e",
+              "parentUUID": "0ed420a9-5b80-4c55-88ac-6f03691c3fea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07382067-4760-4176-82c0-67573fabd31e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 60,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f55293d0-2202-4a09-9de4-3ba6ea8addf8",
+      "title": "",
+      "fullFile": "cypress\\integration\\mytest\\url.spec.js",
+      "file": "cypress\\integration\\mytest\\url.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aaefc636-ee51-4a87-adbb-d083f010aca2",
+          "title": "launch my app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "launching my application in cypress",
+              "fullTitle": "launch my app launching my application in cypress",
+              "timedOut": null,
+              "duration": 40613,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.freshworks.com/');\ncy.contains('Platform');\ncy.contains('Platform').click();\ncy.url().should('include', '/platform');\ncy.contains('Customers').click();\ncy.url().should('include', '/customers');\ncy.wait(1000);\ncy.wait(1000);",
+              "err": {},
+              "uuid": "3e2a5178-6185-4d61-aac9-9e86e12a798e",
+              "parentUUID": "aaefc636-ee51-4a87-adbb-d083f010aca2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e2a5178-6185-4d61-aac9-9e86e12a798e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40613,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "projectreport",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "reportFilename": "projectreport",
+        "overwrite": "false",
+        "html": false,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
