@@ -1,0 +1,19 @@
+{
+  "name": "cypress-practice-ui-automation",
+  "version": "1.0.0",
+  "description": "this is cypress tool to automation ui application",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santosh Choudhary",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.8.0",
+    "cypress-iframe": "^1.0.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0"
+  }
+}
