@@ -6,5 +6,7 @@ describe('launch my app',()=>{
         cy.url().should('include','/platform')
         cy.contains('Customers').click()
         cy.url().should('include','/customers')
+        cy.wait(1000)
+        cy.wait(1000)
     })
 })
